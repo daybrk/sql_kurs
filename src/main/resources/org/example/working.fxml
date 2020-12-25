@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="1181.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="clearTable" layoutX="30.0" layoutY="340.0" mnemonicParsing="false" text="Очистить" />
+      <Button fx:id="buildGraph" layoutX="176.0" layoutY="340.0" mnemonicParsing="false" text="Построить" />
+      <Button fx:id="addColumn" layoutX="108.0" layoutY="340.0" mnemonicParsing="false" text="+" />
+      <Button fx:id="deleteColumn" layoutX="144.0" layoutY="340.0" mnemonicParsing="false" text="-" />
+      <Button fx:id="answer" layoutX="261.0" layoutY="340.0" mnemonicParsing="false" text="Решение" />
+      <ListView fx:id="listView" layoutX="26.0" layoutY="374.0" prefHeight="194.0" prefWidth="300.0" />
+   </children>
+</AnchorPane>

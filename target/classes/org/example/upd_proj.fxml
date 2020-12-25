@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UpdateProjectController">
+   <children>
+      <TextField fx:id="projName" layoutX="32.0" layoutY="54.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="excDep" layoutX="32.0" layoutY="107.0" />
+      <TextField fx:id="projFin" layoutX="32.0" layoutY="160.0" />
+      <Text layoutX="30.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название проекта">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отдел исполнитель">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Финансирование проекта">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="updProj" layoutX="304.0" layoutY="238.0" mnemonicParsing="false" text="Обновить проект" />
+      <TextField fx:id="deadline" layoutX="33.0" layoutY="213.0" />
+      <Text layoutX="32.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Срок сдачи">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

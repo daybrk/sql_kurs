@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="KursovayaDB@DESKTOP-O8NA0U3">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.19">
+    <root id="1">
+      <ServerVersion>15.0.2000</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="IndividualDB">
+      <ObjectId>6</ObjectId>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </database>
+    <database id="3" parent="1" name="KursovayaDB">
+      <ObjectId>7</ObjectId>
+      <Current>1</Current>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+      <Fingerprint>7.44173/7CDFBFAC-5184-4852-A21B-C7C394B4D585@DESKTOP-O8NA0U3\SQLEXPRESS01</Fingerprint>
+    </database>
+    <database id="4" parent="1" name="NEW_DB">
+      <ObjectId>8</ObjectId>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </database>
+    <database id="5" parent="1" name="SchoolDB">
+      <ObjectId>5</ObjectId>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </database>
+    <database id="6" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </database>
+    <database id="7" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </database>
+    <database id="8" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </database>
+    <database id="9" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </database>
+    <schema id="10" parent="3" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="11" parent="3" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="12" parent="3" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="13" parent="3" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="14" parent="3" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="15" parent="3" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="16" parent="3" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="17" parent="3" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="18" parent="3" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="19" parent="3" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="20" parent="3" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2020-12-26.09:28:19.777</IntrospectionTimestamp>
+      <Current>1</Current>
+      <DescriptionsCheckSum>15935955933</DescriptionsCheckSum>
+    </schema>
+    <schema id="21" parent="3" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="22" parent="3" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <table id="23" parent="20" name="sysdiagrams">
+      <ObjectId>661577395</ObjectId>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.817</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.817</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="20" name="Действующие_проекты">
+      <ObjectId>1282103608</ObjectId>
+      <CreatedTimestamp>2020-12-26.09:19:33.160</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.09:28:16.110</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="20" name="Должность">
+      <ObjectId>866102126</ObjectId>
+      <CreatedTimestamp>2020-12-25.02:39:20.037</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-25.02:39:20.143</ModifiedTimestamp>
+    </table>
+    <table id="26" parent="20" name="Личные_данные">
+      <ObjectId>818101955</ObjectId>
+      <CreatedTimestamp>2020-12-25.02:39:09.800</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.04:47:37.883</ModifiedTimestamp>
+    </table>
+    <table id="27" parent="20" name="Отдел">
+      <ObjectId>1122103038</ObjectId>
+      <CreatedTimestamp>2020-12-26.04:23:54.113</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.09:28:16.110</ModifiedTimestamp>
+    </table>
+    <table id="28" parent="20" name="Сотрудник">
+      <ObjectId>258099960</ObjectId>
+      <CreatedTimestamp>2020-12-17.02:49:16.967</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.04:54:15.897</ModifiedTimestamp>
+    </table>
+    <view id="29" parent="20" name="CountKagdoyDoljnost">
+      <ObjectId>418100530</ObjectId>
+      <SourceTextLength>153</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[41] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Должность&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 38&#xd;
+               Bottom = 211&#xd;
+               Right = 257&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 12&#xd;
+         Column = 1995&#xd;
+         Alias = 900&#xd;
+         Table = 1170&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int
+
+</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.05:24:30.417</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.05:24:30.417</ModifiedTimestamp>
+    </view>
+    <view id="30" parent="20" name="Doljnost">
+      <ObjectId>386100416</ObjectId>
+      <SourceTextLength>272</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[40] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Должность&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 38&#xd;
+               Bottom = 179&#xd;
+               Right = 276&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+         Begin Table = &quot;Сотрудник&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 0&#xd;
+               Left = 368&#xd;
+               Bottom = 113&#xd;
+               Right = 538&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 11&#xd;
+         Column = 4335&#xd;
+         Alias = 900&#xd;
+         Table = 1170&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int
+</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.05:08:59.400</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.05:09:40.353</ModifiedTimestamp>
+    </view>
+    <view id="31" parent="20" name="Nachalnik">
+      <ObjectId>450100644</ObjectId>
+      <SourceTextLength>110</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[40] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Отдел&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 38&#xd;
+               Bottom = 136&#xd;
+               Right = 230&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 11&#xd;
+         Column = 1440&#xd;
+         Alias = 900&#xd;
+         Table = 1170&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int
+
+</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.06:41:20.067</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.06:41:20.067</ModifiedTimestamp>
+    </view>
+    <view id="32" parent="20" name="SelecProects">
+      <ObjectId>434100587</ObjectId>
+      <SourceTextLength>101</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[40] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Отдел&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 38&#xd;
+               Bottom = 203&#xd;
+               Right = 235&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 12&#xd;
+         Column = 1440&#xd;
+         Alias = 900&#xd;
+         Table = 1170&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int
+
+</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.06:40:32.877</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.06:40:32.877</ModifiedTimestamp>
+    </view>
+    <view id="33" parent="20" name="SelectProectKakogotoOtdela">
+      <ObjectId>354100302</ObjectId>
+      <SourceTextLength>317</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[40] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Действующие_проекты&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 38&#xd;
+               Bottom = 186&#xd;
+               Right = 276&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+         Begin Table = &quot;Отдел&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 369&#xd;
+               Bottom = 136&#xd;
+               Right = 561&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 2730&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 11&#xd;
+         Column = 3840&#xd;
+         Alias = 900&#xd;
+         Table = 2205&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int
+</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.02:57:08.720</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.02:57:08.720</ModifiedTimestamp>
+    </view>
+    <view id="34" parent="20" name="SelectSotrudnikovIzOtdela">
+      <ObjectId>146099561</ObjectId>
+      <SourceTextLength>431</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[40] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Личные_данные&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 38&#xd;
+               Bottom = 254&#xd;
+               Right = 235&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+         Begin Table = &quot;Отдел&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 124&#xd;
+               Left = 261&#xd;
+               Bottom = 322&#xd;
+               Right = 474&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+         Begin Table = &quot;Сотрудник&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 506&#xd;
+               Bottom = 119&#xd;
+               Right = 676&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 11&#xd;
+         Column = 2055&#xd;
+         Alias = 900&#xd;
+         Table = 1425&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.02:15:47.777</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.02:52:21.640</ModifiedTimestamp>
+    </view>
+    <view id="35" parent="20" name="Z/P">
+      <ObjectId>370100359</ObjectId>
+      <SourceTextLength>382</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[40] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Должность&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 159&#xd;
+               Left = 36&#xd;
+               Bottom = 327&#xd;
+               Right = 267&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+         Begin Table = &quot;Личные_данные&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 16&#xd;
+               Left = 247&#xd;
+               Bottom = 146&#xd;
+               Right = 432&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+         Begin Table = &quot;Сотрудник&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 144&#xd;
+               Left = 519&#xd;
+               Bottom = 263&#xd;
+               Right = 689&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 1545&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 11&#xd;
+         Column = 2805&#xd;
+         Alias = 900&#xd;
+         Table = 1170&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.05:07:48.953</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.05:07:48.953</ModifiedTimestamp>
+    </view>
+    <view id="36" parent="20" name="stag">
+      <ObjectId>402100473</ObjectId>
+      <SourceTextLength>256</SourceTextLength>
+      <ExtendedProperties>MS_DiagramPane1
+N&apos;[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]&#xd;
+Begin DesignProperties = &#xd;
+   Begin PaneConfigurations = &#xd;
+      Begin PaneConfiguration = 0&#xd;
+         NumPanes = 4&#xd;
+         Configuration = &quot;(H (1[40] 4[20] 2[20] 3) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 1&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 4 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 2&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1 [50] 2 [25] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 3&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (4 [30] 2 [40] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 4&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [56] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 5&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (2 [66] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 6&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [50] 3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 7&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (3))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 8&#xd;
+         NumPanes = 3&#xd;
+         Configuration = &quot;(H (1[56] 4[18] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 9&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1 [75] 4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 10&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (1[66] 2) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 11&#xd;
+         NumPanes = 2&#xd;
+         Configuration = &quot;(H (4 [60] 2))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 12&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(H (1) )&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 13&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (4))&quot;&#xd;
+      End&#xd;
+      Begin PaneConfiguration = 14&#xd;
+         NumPanes = 1&#xd;
+         Configuration = &quot;(V (2))&quot;&#xd;
+      End&#xd;
+      ActivePaneConfig = 0&#xd;
+   End&#xd;
+   Begin DiagramPane = &#xd;
+      Begin Origin = &#xd;
+         Top = 0&#xd;
+         Left = 0&#xd;
+      End&#xd;
+      Begin Tables = &#xd;
+         Begin Table = &quot;Должность&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 38&#xd;
+               Bottom = 136&#xd;
+               Right = 261&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+         Begin Table = &quot;Сотрудник&quot;&#xd;
+            Begin Extent = &#xd;
+               Top = 6&#xd;
+               Left = 299&#xd;
+               Bottom = 119&#xd;
+               Right = 469&#xd;
+            End&#xd;
+            DisplayFlags = 280&#xd;
+            TopColumn = 0&#xd;
+         End&#xd;
+      End&#xd;
+   End&#xd;
+   Begin SQLPane = &#xd;
+   End&#xd;
+   Begin DataPane = &#xd;
+      Begin ParameterDefaults = &quot;&quot;&#xd;
+      End&#xd;
+      Begin ColumnWidths = 9&#xd;
+         Width = 284&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+         Width = 1500&#xd;
+      End&#xd;
+   End&#xd;
+   Begin CriteriaPane = &#xd;
+      Begin ColumnWidths = 11&#xd;
+         Column = 5520&#xd;
+         Alias = 900&#xd;
+         Table = 1170&#xd;
+         Output = 720&#xd;
+         Append = 1400&#xd;
+         NewValue = 1170&#xd;
+         SortType = 1350&#xd;
+         SortOrder = 1410&#xd;
+         GroupBy = 1350&#xd;
+         Filter = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+         Or = 1350&#xd;
+      End&#xd;
+   End&#xd;
+End&#xd;
+&apos;
+nvarchar
+MS_DiagramPaneCount
+1
+int
+</ExtendedProperties>
+      <CreatedTimestamp>2020-12-17.05:10:42.313</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.05:10:42.313</ModifiedTimestamp>
+    </view>
+    <routine id="37" parent="20" name="fn_diagramobjects">
+      <ObjectId>805577908</ObjectId>
+      <SourceTextLength>1647</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.840</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.840</ModifiedTimestamp>
+      <RoutineKind>function</RoutineKind>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="38" parent="20" name="sp_alterdiagram">
+      <ObjectId>773577794</ObjectId>
+      <SourceTextLength>1501</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.833</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.833</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="39" parent="20" name="sp_creatediagram">
+      <ObjectId>741577680</ObjectId>
+      <SourceTextLength>1223</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.830</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.830</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="40" parent="20" name="sp_dropdiagram">
+      <ObjectId>789577851</ObjectId>
+      <SourceTextLength>896</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.840</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.840</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="41" parent="20" name="sp_helpdiagramdefinition">
+      <ObjectId>725577623</ObjectId>
+      <SourceTextLength>921</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.830</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.830</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="42" parent="20" name="sp_helpdiagrams">
+      <ObjectId>709577566</ObjectId>
+      <SourceTextLength>658</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.827</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.827</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="43" parent="20" name="sp_renamediagram">
+      <ObjectId>757577737</ObjectId>
+      <SourceTextLength>1721</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.833</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.833</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="44" parent="20" name="sp_upgraddiagrams">
+      <ObjectId>645577338</ObjectId>
+      <SourceTextLength>1463</SourceTextLength>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <CreatedTimestamp>2020-12-10.02:15:26.813</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.813</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <column id="45" parent="23" name="name">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="23" name="principal_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="23" name="diagram_id">
+      <Position>3</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="23" name="version">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="49" parent="23" name="definition">
+      <Position>5</Position>
+      <DataType>varbinary(max)|0s</DataType>
+    </column>
+    <index id="50" parent="23" name="PK__sysdiagr__C2B05B615CB844E5">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>diagram_id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="51" parent="23" name="UK_principal_name">
+      <Position>2</Position>
+      <ColNames>principal_id
+name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="23" name="PK__sysdiagr__C2B05B615CB844E5">
+      <ObjectId>677577452</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-10.02:15:26.827</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.827</ModifiedTimestamp>
+      <ColNames>diagram_id</ColNames>
+      <UnderlyingIndexName>PK__sysdiagr__C2B05B615CB844E5</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="53" parent="23" name="UK_principal_name">
+      <ObjectId>693577509</ObjectId>
+      <CreatedTimestamp>2020-12-10.02:15:26.827</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-10.02:15:26.827</ModifiedTimestamp>
+      <ColNames>principal_id
+name</ColNames>
+      <UnderlyingIndexName>UK_principal_name</UnderlyingIndexName>
+    </key>
+    <column id="54" parent="24" name="Id_Проекта">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="24" name="Название_проекта">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="56" parent="24" name="Отдел_исполнитель">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="24" name="Финансирование_проекта">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="58" parent="24" name="Срок_сдачи">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="59" parent="24" name="PK_Действующие_проекты">
+      <Position>1</Position>
+      <ColNames>Id_Проекта</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="24" name="PK_Действующие_проекты">
+      <ObjectId>1298103665</ObjectId>
+      <CreatedTimestamp>2020-12-26.09:19:33.273</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.09:19:33.273</ModifiedTimestamp>
+      <ColNames>Id_Проекта</ColNames>
+      <UnderlyingIndexName>PK_Действующие_проекты</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="61" parent="24" name="FK_Действующие_проекты_Отдел">
+      <ObjectId>1346103836</ObjectId>
+      <CreatedTimestamp>2020-12-26.09:28:16.107</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.09:28:16.107</ModifiedTimestamp>
+      <ColNames>Id_Проекта</ColNames>
+      <RefTableId>1122103038</RefTableId>
+      <RefTableName>Отдел</RefTableName>
+      <RefKeyName>IX_Отдел</RefKeyName>
+      <RefColNames>Проекты</RefColNames>
+    </foreign-key>
+    <column id="62" parent="25" name="Id_Сотрудника">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="25" name="Название_должности">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="64" parent="25" name="Заработная_плата">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="65" parent="25" name="Стаж_работы">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="66" parent="25" name="Повышение_должности">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="67" parent="25" name="PK_Должность">
+      <Position>1</Position>
+      <ColNames>Id_Сотрудника</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="25" name="PK_Должность">
+      <ObjectId>882102183</ObjectId>
+      <CreatedTimestamp>2020-12-25.02:39:20.060</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-25.02:39:20.060</ModifiedTimestamp>
+      <ColNames>Id_Сотрудника</ColNames>
+      <UnderlyingIndexName>PK_Должность</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="26" name="Id_Сотрудника">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="26" name="Имя">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="71" parent="26" name="Фамилия">
+      <Position>3</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="72" parent="26" name="Отчество">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="73" parent="26" name="Номер_телефона">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="74" parent="26" name="Адресс">
+      <Position>6</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="75" parent="26" name="PK_Личные_данные">
+      <Position>1</Position>
+      <ColNames>Id_Сотрудника</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="26" name="PK_Личные_данные">
+      <ObjectId>834102012</ObjectId>
+      <CreatedTimestamp>2020-12-25.02:39:10.027</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-25.02:39:10.027</ModifiedTimestamp>
+      <ColNames>Id_Сотрудника</ColNames>
+      <UnderlyingIndexName>PK_Личные_данные</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="77" parent="27" name="Id_Отдела">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="27" name="Название_отдела">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="79" parent="27" name="Начальник_отдела">
+      <Position>3</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="80" parent="27" name="Проекты">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="81" parent="27" name="PK_Отдел_1">
+      <Position>1</Position>
+      <ColNames>Id_Отдела</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="82" parent="27" name="IX_Отдел">
+      <Position>2</Position>
+      <ColNames>Проекты</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="83" parent="27" name="PK_Отдел_1">
+      <ObjectId>1138103095</ObjectId>
+      <CreatedTimestamp>2020-12-26.04:23:54.237</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.04:23:54.237</ModifiedTimestamp>
+      <ColNames>Id_Отдела</ColNames>
+      <UnderlyingIndexName>PK_Отдел_1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="84" parent="27" name="IX_Отдел">
+      <ObjectId>1234103437</ObjectId>
+      <CreatedTimestamp>2020-12-26.04:54:15.753</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.04:54:15.753</ModifiedTimestamp>
+      <ColNames>Проекты</ColNames>
+      <UnderlyingIndexName>IX_Отдел</UnderlyingIndexName>
+    </key>
+    <column id="85" parent="28" name="Id_Сотрудника">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="28" name="Должность">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="28" name="Отдел">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="88" parent="28" name="PK_Сотрудник_1">
+      <Position>1</Position>
+      <ColNames>Id_Сотрудника
+Должность
+Отдел</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="28" name="PK_Сотрудник_1">
+      <ObjectId>274100017</ObjectId>
+      <CreatedTimestamp>2020-12-17.02:49:16.990</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.02:49:16.990</ModifiedTimestamp>
+      <ColNames>Id_Сотрудника
+Должность
+Отдел</ColNames>
+      <UnderlyingIndexName>PK_Сотрудник_1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="28" name="FK_Сотрудник_Личные_данные">
+      <ObjectId>850102069</ObjectId>
+      <CreatedTimestamp>2020-12-25.02:39:10.163</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-25.02:39:10.163</ModifiedTimestamp>
+      <ColNames>Id_Сотрудника</ColNames>
+      <RefTableId>818101955</RefTableId>
+      <RefTableName>Личные_данные</RefTableName>
+      <RefKeyName>PK_Личные_данные</RefKeyName>
+      <RefColNames>Id_Сотрудника</RefColNames>
+    </foreign-key>
+    <foreign-key id="91" parent="28" name="FK_Сотрудник_Должность1">
+      <ObjectId>898102240</ObjectId>
+      <CreatedTimestamp>2020-12-25.02:39:20.143</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-25.02:39:20.143</ModifiedTimestamp>
+      <ColNames>Должность</ColNames>
+      <RefTableId>866102126</RefTableId>
+      <RefTableName>Должность</RefTableName>
+      <RefKeyName>PK_Должность</RefKeyName>
+      <RefColNames>Id_Сотрудника</RefColNames>
+    </foreign-key>
+    <foreign-key id="92" parent="28" name="FK_Сотрудник_Отдел1">
+      <ObjectId>1250103494</ObjectId>
+      <CreatedTimestamp>2020-12-26.04:54:15.893</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-26.04:54:15.893</ModifiedTimestamp>
+      <ColNames>Отдел</ColNames>
+      <RefTableId>1122103038</RefTableId>
+      <RefTableName>Отдел</RefTableName>
+      <RefKeyName>PK_Отдел_1</RefKeyName>
+      <RefColNames>Id_Отдела</RefColNames>
+    </foreign-key>
+    <column id="93" parent="29" name="Кл-во">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="94" parent="30" name="Должность">
+      <Position>1</Position>
+      <DataType>nchar(10 char)|0s</DataType>
+    </column>
+    <column id="95" parent="31" name="Начальники отделов">
+      <Position>1</Position>
+      <DataType>nchar(50 char)|0s</DataType>
+    </column>
+    <column id="96" parent="32" name="Кл-во проектов">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="97" parent="33" name="Проекты">
+      <Position>1</Position>
+      <DataType>nchar(50 char)|0s</DataType>
+    </column>
+    <column id="98" parent="34" name="Сотрудник">
+      <Position>1</Position>
+      <DataType>nvarchar(32 char)|0s</DataType>
+    </column>
+    <column id="99" parent="35" name="З/П">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="100" parent="36" name="Стаж">
+      <Position>1</Position>
+      <DataType>nchar(10 char)|0s</DataType>
+    </column>
+    <argument id="101" parent="37">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="102" parent="38" name="@diagramname">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+    </argument>
+    <argument id="103" parent="38" name="@owner_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="104" parent="38" name="@version">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="105" parent="38" name="@definition">
+      <Position>4</Position>
+      <DataType>varbinary(max)|0s</DataType>
+    </argument>
+    <argument id="106" parent="39" name="@diagramname">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+    </argument>
+    <argument id="107" parent="39" name="@owner_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="108" parent="39" name="@version">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="109" parent="39" name="@definition">
+      <Position>4</Position>
+      <DataType>varbinary(max)|0s</DataType>
+    </argument>
+    <argument id="110" parent="40" name="@diagramname">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+    </argument>
+    <argument id="111" parent="40" name="@owner_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="112" parent="41" name="@diagramname">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+    </argument>
+    <argument id="113" parent="41" name="@owner_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="114" parent="42" name="@diagramname">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+    </argument>
+    <argument id="115" parent="42" name="@owner_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="116" parent="43" name="@diagramname">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+    </argument>
+    <argument id="117" parent="43" name="@owner_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="118" parent="43" name="@new_diagramname">
+      <Position>3</Position>
+      <DataType>sysname|0s</DataType>
+    </argument>
+  </database-model>
+</dataSource>
