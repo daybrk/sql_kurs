@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import org.example.AlertClass;
 import org.example.ConnectDB;
 import org.example.sql.InsertClass;
 
@@ -37,10 +38,16 @@ public class NewDepartment {
         addDep.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if (depName.getText().equals("") || depChief.getText().equals("")) {
-                    System.out.println("Ge-Ge");
+
+                if (depName.getText().equals("")) {
+
+                    AlertClass.alert("Введеите имя отдела");
+
+                } else if (depChief.getText().equals("")) {
+                    InsertClass.addNewDep(ConnectDB.maxDepId, depName.getText(), 0, depProj.getText());
+
                 } else {
-                    InsertClass.addNewDep(ConnectDB.maxDepId, depName.getText(), depChief.getText(), depProj.getText());
+                    InsertClass.addNewDep(ConnectDB.maxDepId, depName.getText(), Integer.parseInt(depChief.getText()), depProj.getText());
                     System.out.println();
                 }
             }

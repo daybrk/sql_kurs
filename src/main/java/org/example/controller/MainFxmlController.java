@@ -138,6 +138,9 @@ public class MainFxmlController {
                 setEmpList();
                 setDepList();
                 setProjList();
+                inf_about_dep.clear();
+                inf_about_emp.clear();
+                projInfo.clear();
             }
         });
 
@@ -267,9 +270,10 @@ public class MainFxmlController {
                 .addListener((ObservableValue<? extends String> ov, String old_val, String new_val) -> {
                     try {
                         idEmp = new_val.charAt(0);
+                        inf_about_emp.setEditable(false);
                         inf_about_emp.setText(String.valueOf(QueryClass.getFullNamesOfEmp("Личные_данные",
                                 Integer.parseInt(String.valueOf(idEmp)), "Должность"))
-                                .replaceAll("^\\[|]$", ""));
+                                .replaceAll("^\\[|]$", "").replaceAll(",", ""));
                     } catch (NullPointerException e) {
 
                     }
@@ -281,9 +285,11 @@ public class MainFxmlController {
                 .addListener((ObservableValue<? extends String> ov, String old_val, String new_val) -> {
                     try {
                         idDep = new_val.charAt(0);
+                        inf_about_dep.setEditable(false);
                         inf_about_dep.setText(String.valueOf(QueryClass.getFullDepartment("Отдел",
                                 Integer.parseInt(String.valueOf(idDep))))
-                                .replaceAll("^\\[|]$", ""));
+                                .replaceAll("^\\[|]$", "").replaceAll(",", ""));
+
                     } catch (NullPointerException e) {
 
                     }
@@ -295,9 +301,10 @@ public class MainFxmlController {
                 .addListener((ObservableValue<? extends String> ov, String old_val, String new_val) -> {
                     try {
                         idProj = new_val.charAt(0);
+                        projInfo.setEditable(false);
                         projInfo.setText(String.valueOf(QueryClass.getFullProject("Действующие_проекты",
                                 Integer.parseInt(String.valueOf(idProj))))
-                                .replaceAll("^\\[|]$", ""));
+                                .replaceAll("^\\[|]$", "").replaceAll(",", ""));
                     } catch (NullPointerException e) {
 
                     }

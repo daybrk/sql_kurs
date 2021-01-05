@@ -27,7 +27,7 @@ public class UpdateClass {
             stmt.executeUpdate
                     ("UPDATE Личные_данные SET Имя = " + "'" + firstName + "'" + ", Фамилия = " +
                             "'" + secondName + "'" + ", Отчество = " + "'" + middleName + "'" + ", Номер_телефона = "
-                            +  "'" + numPhone + "'" + ",  Адресс = " + "'" + address + "'" + " WHERE Id_Сотрудника = " + id);
+                            +  "'" + numPhone + "'" + ",  Адрес = " + "'" + address + "'" + " WHERE Id_Сотрудника = " + id);
 
             stmt.close();
         } catch (SQLException e) {

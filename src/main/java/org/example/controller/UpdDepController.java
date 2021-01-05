@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import org.example.AlertClass;
 import org.example.sql.QueryClass;
 import org.example.sql.UpdateClass;
 
@@ -41,14 +42,20 @@ public class UpdDepController {
 
         arrayList = QueryClass.getFullDepartment("Отдел", id);
 
-        depName.setText(arrayList.get(0));
-        depChief.setText(arrayList.get(1));
-        depProj.setText(arrayList.get(2));
+        depName.setText(arrayList.get(1));
+        depChief.setText(arrayList.get(3));
+        depProj.setText(arrayList.get(5));
 
         updDepInf.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                UpdateClass.updateDepInf(id, depName.getText(), depChief.getText(), Integer.parseInt(depProj.getText()));
+                if (depName.getText().equals("")) {
+
+                    AlertClass.alert("Введеите имя отдела");
+
+                } else {
+                    UpdateClass.updateDepInf(id, depName.getText(), depChief.getText(), Integer.parseInt(depProj.getText()));
+                }
             }
         });
 

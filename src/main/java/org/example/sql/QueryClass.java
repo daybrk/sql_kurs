@@ -64,11 +64,16 @@ public class QueryClass {
 
                 if (executeQuery.getString("Id_Сотрудника").equals(String.valueOf(id))) {
 
+                    fullName.add("Фамилия: ");
                     fullName.add((executeQuery.getString("Фамилия")));
+                    fullName.add("\nИмя: ");
                     fullName.add((executeQuery.getString("Имя")));
+                    fullName.add("\nОтчество: ");
                     fullName.add((executeQuery.getString("Отчество")));
+                    fullName.add("\nНомер телефона: ");
                     fullName.add((executeQuery.getString("Номер_телефона")));
-                    fullName.add((executeQuery.getString("Адресс")));
+                    fullName.add("\nАдрес: ");
+                    fullName.add((executeQuery.getString("Адрес")));
                 }
             }
 
@@ -80,10 +85,28 @@ public class QueryClass {
 
                 if (executeQuery.getString("Id_Сотрудника").equals(String.valueOf(id))) {
 
+                    fullName.add("\nНазвание должности: ");
                     fullName.add((executeQuery.getString("Название_должности")));
+                    fullName.add("\nЗаработная плата: ");
                     fullName.add((executeQuery.getString("Заработная_плата")));
+                    fullName.add("\nСтаж работы: ");
                     fullName.add((executeQuery.getString("Стаж_работы")));
+                    fullName.add("\nУровень должности: ");
                     fullName.add((executeQuery.getString("Повышение_должности")));
+                }
+            }
+
+            executeQuery.close();
+
+            executeQuery = stmt.executeQuery("SELECT * FROM " + "Сотрудник");
+
+            while (executeQuery.next()) {
+
+                if (executeQuery.getString("Id_Сотрудника").equals(String.valueOf(id))) {
+
+                    fullName.add("\nОтдел: ");
+                    fullName.add((executeQuery.getString("Отдел")));
+
                 }
             }
 
@@ -135,8 +158,18 @@ public class QueryClass {
             while (executeQuery.next()) {
 
                 if (executeQuery.getString("Id_Отдела").equals(String.valueOf(id))) {
+
+                    depInf.add("Название отдела: ");
                     depInf.add(executeQuery.getString("Название_отдела"));
-                    depInf.add(executeQuery.getString("Начальник_отдела"));
+
+                    if (Integer.parseInt(executeQuery.getString("Начальник_отдела")) == 0){
+                        depInf.add("\nНачальник отдела: ");
+                        depInf.add("Начальник отдела не назначен");
+                    } else {
+                        depInf.add("\nНачальник отдела: ");
+                        depInf.add(executeQuery.getString("Начальник_отдела"));
+                    }
+                    depInf.add("\nПроекты: ");
                     depInf.add(executeQuery.getString("Проекты"));
                 }
 
@@ -189,9 +222,14 @@ public class QueryClass {
             while (executeQuery.next()) {
 
                 if (executeQuery.getString("Id_Проекта").equals(String.valueOf(id))) {
+
+                    proj.add("Название проекта: ");
                     proj.add(executeQuery.getString("Название_проекта"));
+                    proj.add("\nОтдел исполнитель: ");
                     proj.add(executeQuery.getString("Отдел_исполнитель"));
+                    proj.add("\nФинансирование проекта: ");
                     proj.add(executeQuery.getString("Финансирование_проекта"));
+                    proj.add("\nСрок сдачи: ");
                     proj.add(executeQuery.getString("Срок_сдачи"));
 
                 }
@@ -214,7 +252,7 @@ public class QueryClass {
             ResultSet executeQuery =
                     stmt.executeQuery
                             ("SELECT        " +
-                                    "SUM(CASE WHEN Название_должности = 'ДЖ' THEN 1 ELSE 0 END) AS [Кл-во]\n" +
+                                    "SUM(CASE WHEN Название_должности = 'Какая-то должность 1' THEN 1 ELSE 0 END) AS [Кл-во]\n" +
                                     "FROM            dbo.Должность");
             while (executeQuery.next()) {
                 query = query + " " + executeQuery.getString("Кл-во");
@@ -329,7 +367,7 @@ public class QueryClass {
                                     "FROM            dbo.Личные_данные " +
                                     "INNER JOIN dbo.Сотрудник ON dbo.Личные_данные.Id_Сотрудника = dbo.Сотрудник.Id_Сотрудника " +
                                     "INNER JOIN dbo.Отдел ON dbo.Сотрудник.Отдел = dbo.Отдел.Id_Отдела\n" +
-                                    "WHERE  Название_отдела = 'S'");
+                                    "WHERE  Название_отдела = 'Какой-то отдел 1'");
             while (executeQuery.next()) {
                 query = query + " " + executeQuery.getString("Сотрудник");
             }
@@ -379,6 +417,36 @@ public class QueryClass {
                                     "WHERE        (dbo.Сотрудник.Id_Сотрудника = 1)");
             while (executeQuery.next()) {
                 query = query + " " + executeQuery.getString("З/П");
+            }
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return query;
+    }
+
+    public static String query9() {
+
+        String query = "";
+
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet executeQuery =
+                    stmt.executeQuery
+                            ("SELECT        dbo.Отдел.Название_отдела AS Отдел, dbo.Личные_данные.Имя + '' + dbo.Личные_данные.Фамилия + '' + dbo.Личные_данные.Отчество AS Сотрудники, \n" +
+                                    "                         dbo.Должность.Название_должности + ' стаж работы ' + dbo.Должность.Стаж_работы AS Должность, dbo.Действующие_проекты.Название_проекта AS Проект\n" +
+                                    "FROM            dbo.Сотрудник INNER JOIN\n" +
+                                    "                         dbo.Отдел ON dbo.Сотрудник.Отдел = dbo.Отдел.Id_Отдела INNER JOIN\n" +
+                                    "                         dbo.Личные_данные ON dbo.Сотрудник.Id_Сотрудника = dbo.Личные_данные.Id_Сотрудника INNER JOIN\n" +
+                                    "                         dbo.Должность ON dbo.Сотрудник.Должность = dbo.Должность.Id_Сотрудника FULL OUTER JOIN\n" +
+                                    "                         dbo.Действующие_проекты ON dbo.Отдел.Id_Отдела = dbo.Действующие_проекты.Отдел_исполнитель\n" +
+                                    "WHERE        (dbo.Действующие_проекты.Финансирование_проекта > 100) AND (dbo.Отдел.Id_Отдела = 1) AND (dbo.Сотрудник.Отдел = 1)");
+            while (executeQuery.next()) {
+                query = query + " " + executeQuery.getString("Отдел") + query
+                        + " " + executeQuery.getString("Сотрудники") + query
+                        + " " + executeQuery.getString("Должность") + query
+                        + " " + executeQuery.getString("Проект");
             }
             stmt.close();
         } catch (SQLException e) {

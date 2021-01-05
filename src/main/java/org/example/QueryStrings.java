@@ -4,7 +4,7 @@ public class QueryStrings {
 
     public static String addNewPersonalFile =
             "INSERT INTO [Личные_данные] " +
-                    "([Id_Сотрудника], [Имя], [Фамилия], [Отчество], [Номер_телефона], [Адресс])";
+                    "([Id_Сотрудника], [Имя], [Фамилия], [Отчество], [Номер_телефона], [Адрес])";
 
     public static String addNewPosition =
             "INSERT INTO [Должность] " +

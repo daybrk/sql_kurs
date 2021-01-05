@@ -46,6 +46,10 @@ public class QueryController {
     private Button q8;
 
     @FXML
+    private Button q9;
+
+
+    @FXML
     void initialize() {
 
         q1.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -101,6 +105,13 @@ public class QueryController {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 queryText.setText(QueryClass.query8());
+            }
+        });
+
+        q9.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                queryText.setText(QueryClass.query9());
             }
         });
 

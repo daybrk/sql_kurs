@@ -74,7 +74,7 @@ public class InsertClass {
         return true;
     }
 
-    public static void addNewDep(int id, String depName, String depChief, String proj) {
+    public static void addNewDep(int id, String depName, int depChief, String proj) {
 
         try {
             Statement stmt = connection.createStatement();
@@ -99,7 +99,7 @@ public class InsertClass {
             ConnectDB.maxProjId++;
             stmt.close();
         } catch (SQLException  e) {
-            System.out.println("Error: addNewDep");
+            System.out.println("Error: addNewProj");
             e.printStackTrace();
         }
     }

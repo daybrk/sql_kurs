@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+ //TODO: Добавить составной запрос. Заняться оформлением отчёта. Переделать добавление проектов к отделам
 
 public class App extends Application {
 
