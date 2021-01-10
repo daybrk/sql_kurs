@@ -67,9 +67,9 @@ public class UpdateProjectController {
                     int e = Integer.parseInt(eD);
 
                     if (pN.equals("") || eD.equals("") || pF.equals("") || dL.equals("")) {
-
+                        AlertClass.alert("Введите обязательные поля");
                     } else {
-                        UpdateClass.updateDepProj(id, projName.getText(), Integer.parseInt(excDep.getText()),
+                        UpdateClass.updateProj(id, projName.getText(), Integer.parseInt(excDep.getText()),
                                 projFin.getText(), deadline.getText());
                     }
 

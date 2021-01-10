@@ -97,7 +97,7 @@ public class UpdEmpInfController {
                     if (fN.equals("") || sN.equals("") || mN.equals("") || ad.equals("") || nP.equals("") || jT.equals("")
                             || wag.equals("") || wE.equals("") || uP.equals("") || dep.equals("")) {
 
-                        System.out.println("firstName.getText()");
+                        AlertClass.alert("Введите обязательные поля");
 
                     } else {
                         UpdateClass.updateEmpInf(id, firstName.getText(), secondName.getText(), middleName.getText(),

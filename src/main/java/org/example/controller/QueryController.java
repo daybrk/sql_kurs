@@ -3,11 +3,12 @@ package org.example.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import org.example.App;
 import org.example.sql.QueryClass;
 
 public class QueryController {
@@ -22,98 +23,96 @@ public class QueryController {
     private TextArea queryText;
 
     @FXML
-    private Button q1;
+    private MenuButton menuButton;
+
 
     @FXML
-    private Button q2;
+    private MenuItem item1;
 
     @FXML
-    private Button q3;
+    private MenuItem item2;
 
     @FXML
-    private Button q4;
+    private MenuItem item3;
 
     @FXML
-    private Button q5;
+    private MenuItem item4;
 
     @FXML
-    private Button q6;
+    private MenuItem item5;
 
     @FXML
-    private Button q7;
+    private MenuItem item6;
 
     @FXML
-    private Button q8;
+    private MenuItem item7;
 
     @FXML
-    private Button q9;
+    private TextField dataEntry;
+
+    @FXML
+    private Button execute;
 
 
     @FXML
     void initialize() {
 
-        q1.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        App.root.getChildren();
+
+        item1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(MouseEvent mouseEvent) {
-                queryText.setText(QueryClass.query1());
+            public void handle(ActionEvent actionEvent) {
+                queryText.setText(QueryClass.query1(dataEntry.getText()));
             }
         });
 
-        q2.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        item2.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(MouseEvent mouseEvent) {
-                queryText.setText(QueryClass.query2());
-            }
-        });
-
-        q3.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                queryText.setText(QueryClass.query3());
-            }
-        });
-
-        q4.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
+            public void handle(ActionEvent actionEvent) {
                 queryText.setText(QueryClass.query4());
             }
         });
 
-        q5.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        item3.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(MouseEvent mouseEvent) {
-                queryText.setText(QueryClass.query5());
+            public void handle(ActionEvent actionEvent) {
+                queryText.setText(QueryClass.query5(Integer.parseInt(dataEntry.getText())));
             }
         });
 
-        q6.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        item4.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(MouseEvent mouseEvent) {
-                queryText.setText(QueryClass.query6());
+            public void handle(ActionEvent actionEvent) {
+                queryText.setText(QueryClass.query6(dataEntry.getText()));
             }
         });
 
-        q7.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        item5.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(MouseEvent mouseEvent) {
-                queryText.setText(QueryClass.query7());
+            public void handle(ActionEvent actionEvent) {
+                queryText.setText(QueryClass.query7(Integer.parseInt(dataEntry.getText())));
             }
         });
 
-        q8.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        item6.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(MouseEvent mouseEvent) {
+            public void handle(ActionEvent actionEvent) {
                 queryText.setText(QueryClass.query8());
             }
         });
 
-        q9.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        item7.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(MouseEvent mouseEvent) {
-                queryText.setText(QueryClass.query9());
+            public void handle(ActionEvent actionEvent) {
+                queryText.setText("1-Отдел  2-Сотрудники  3-Должность  4-Проект \n" +
+                        String.valueOf(QueryClass.query9())
+                        .replaceAll("^\\[|]$", "").replaceAll(",", ""));
             }
         });
 
+
+
     }
+
+
 }

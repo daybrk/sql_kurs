@@ -21,6 +21,9 @@ public class ConnectDB {
 
     public static void ex() {
 
+        String s = "   212";
+        s = s.replaceAll("2", "");
+        System.out.println(s);
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

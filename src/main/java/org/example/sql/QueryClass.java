@@ -243,75 +243,33 @@ public class QueryClass {
         return proj;
     }
 
-    public static String query1() {
+    public static String query1(String jobTitle) {
 
-        String query = "";
+        String query = "Количество сотрудников с должностью: \n " + jobTitle + " = ";
 
+        //кл-во сотрудников с какой-то должностью
         try {
             Statement stmt = connection.createStatement();
             ResultSet executeQuery =
                     stmt.executeQuery
                             ("SELECT        " +
-                                    "SUM(CASE WHEN Название_должности = 'Какая-то должность 1' THEN 1 ELSE 0 END) AS [Кл-во]\n" +
+                                    "SUM(CASE WHEN Название_должности = "+ "'" + jobTitle + "'" + " THEN 1 ELSE 0 END) AS [Кл-во]\n" +
                                     "FROM            dbo.Должность");
             while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("Кл-во");
+                query += " " + executeQuery.getString("Кл-во");
             }
             stmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return query;
-    }
-
-    public static String query2() {
-
-        String query = "";
-
-        try {
-            Statement stmt = connection.createStatement();
-            ResultSet executeQuery =
-                    stmt.executeQuery
-                            ("SELECT    dbo.Должность.Название_должности AS Должность\n" +
-                            "      FROM     dbo.Должность " +
-                            "      INNER JOIN\n" +
-                            "               dbo.Сотрудник ON dbo.Должность.Id_Сотрудника = dbo.Сотрудник.Должность\n" +
-                            "      WHERE    (dbo.Сотрудник.Id_Сотрудника = 1)");
-            while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("Должность");
-            }
-            stmt.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return query;
-    }
-
-    public static String query3() {
-
-        String query = "";
-
-        try {
-            Statement stmt = connection.createStatement();
-            ResultSet executeQuery =
-                    stmt.executeQuery
-                            ("SELECT        Начальник_отдела AS [Начальники отделов]\n" +
-                                    "FROM            dbo.Отдел");
-            while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("Начальники отделов");
-            }
-            stmt.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
         return query;
     }
 
     public static String query4() {
 
-        String query = "";
+        String query = "Общее количество проектов: ";
+
+        //Общее кл-во проектов
 
         try {
             Statement stmt = connection.createStatement();
@@ -330,21 +288,22 @@ public class QueryClass {
         return query;
     }
 
-    public static String query5() {
+    public static String query5(int depId) {
 
         String query = "";
+
+        //Проекты какого-то отдела
 
         try {
             Statement stmt = connection.createStatement();
             ResultSet executeQuery =
                     stmt.executeQuery
                             ("SELECT        dbo.Действующие_проекты.Название_проекта AS Проекты\n" +
-                                    "FROM            dbo.Действующие_проекты INNER JOIN\n" +
-                                    "                         dbo.Отдел ON " +
-                                    "dbo.Действующие_проекты.Id_Проекта = dbo.Отдел.Проекты\n" +
-                                    "WHERE        (dbo.Действующие_проекты.Отдел_исполнитель = 1)");
+                                    "FROM            dbo.Действующие_проекты " +
+                                    "WHERE        (dbo.Действующие_проекты.Отдел_исполнитель = " + depId + ")");
             while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("Проекты");
+                query += " " + executeQuery.getString("Проекты");
+                query += "\n ";
             }
             stmt.close();
         } catch (SQLException e) {
@@ -354,22 +313,25 @@ public class QueryClass {
         return query;
     }
 
-    public static String query6() {
+    public static String query6(String depName) {
 
         String query = "";
+
+        //Сотрудники какого-то отдела
 
         try {
             Statement stmt = connection.createStatement();
             ResultSet executeQuery =
                     stmt.executeQuery
                             ("SELECT       " +
-                                    " dbo.Личные_данные.Имя + '' + dbo.Личные_данные.Фамилия + '' + dbo.Личные_данные.Отчество AS Сотрудник\n" +
+                                    " dbo.Личные_данные.Фамилия + ' ' + dbo.Личные_данные.Имя + ' ' + dbo.Личные_данные.Отчество AS Сотрудник\n" +
                                     "FROM            dbo.Личные_данные " +
                                     "INNER JOIN dbo.Сотрудник ON dbo.Личные_данные.Id_Сотрудника = dbo.Сотрудник.Id_Сотрудника " +
                                     "INNER JOIN dbo.Отдел ON dbo.Сотрудник.Отдел = dbo.Отдел.Id_Отдела\n" +
-                                    "WHERE  Название_отдела = 'Какой-то отдел 1'");
+                                    "WHERE  Название_отдела = "+ "'" + depName+ "'");
             while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("Сотрудник");
+                query += " " + executeQuery.getString("Сотрудник");
+                query += "\n ";
             }
             stmt.close();
         } catch (SQLException e) {
@@ -379,9 +341,11 @@ public class QueryClass {
         return query;
     }
 
-    public static String query7() {
+    public static String query7(int empId) {
 
-        String query = "";
+        String query = "Стаж работы сотрудника: ";
+
+        // Стаж какого-то сотрудника
 
         try {
             Statement stmt = connection.createStatement();
@@ -390,9 +354,9 @@ public class QueryClass {
                             ("SELECT        dbo.Должность.Стаж_работы AS Стаж\n" +
                                     "FROM        dbo.Должность INNER JOIN\n" +
                                     " dbo.Сотрудник ON dbo.Должность.Id_Сотрудника = dbo.Сотрудник.Должность\n" +
-                                    "WHERE        (dbo.Сотрудник.Id_Сотрудника = 1)");
+                                    "WHERE        (dbo.Сотрудник.Id_Сотрудника = " + empId + ")");
             while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("Стаж");
+                query += " " + executeQuery.getString("Стаж");
             }
             stmt.close();
         } catch (SQLException e) {
@@ -410,13 +374,15 @@ public class QueryClass {
             Statement stmt = connection.createStatement();
             ResultSet executeQuery =
                     stmt.executeQuery
-                            ("SELECT        dbo.Должность.Заработная_плата AS [З/П]\n" +
+                            ("SELECT        dbo.Личные_данные.Фамилия + ' ' + dbo.Личные_данные.Имя + ' ' + dbo.Личные_данные.Отчество AS Сотрудники, " +
+                                    "dbo.Должность.Заработная_плата AS [З/П]\n" +
                                     "FROM            dbo.Должность INNER JOIN\n" +
                                     "dbo.Сотрудник ON dbo.Должность.Id_Сотрудника = dbo.Сотрудник.Должность INNER JOIN\n" +
-                                    "dbo.Личные_данные ON dbo.Сотрудник.Id_Сотрудника = dbo.Личные_данные.Id_Сотрудника\n" +
-                                    "WHERE        (dbo.Сотрудник.Id_Сотрудника = 1)");
+                                    "dbo.Личные_данные ON dbo.Сотрудник.Id_Сотрудника = dbo.Личные_данные.Id_Сотрудника\n");
             while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("З/П");
+                query += " " + executeQuery.getString("Сотрудники") + ":     " +
+                        executeQuery.getString("З/П") + " рублей";
+                query += "\n";
             }
             stmt.close();
         } catch (SQLException e) {
@@ -426,9 +392,9 @@ public class QueryClass {
         return query;
     }
 
-    public static String query9() {
+    public static ArrayList<String> query9() {
 
-        String query = "";
+        ArrayList<String> arrayLists = new ArrayList<>();
 
         try {
             Statement stmt = connection.createStatement();
@@ -443,17 +409,23 @@ public class QueryClass {
                                     "                         dbo.Действующие_проекты ON dbo.Отдел.Id_Отдела = dbo.Действующие_проекты.Отдел_исполнитель\n" +
                                     "WHERE        (dbo.Действующие_проекты.Финансирование_проекта > 100) AND (dbo.Отдел.Id_Отдела = 1) AND (dbo.Сотрудник.Отдел = 1)");
             while (executeQuery.next()) {
-                query = query + " " + executeQuery.getString("Отдел") + query
-                        + " " + executeQuery.getString("Сотрудники") + query
-                        + " " + executeQuery.getString("Должность") + query
-                        + " " + executeQuery.getString("Проект");
+
+                arrayLists.add("1-" + executeQuery.getString("Отдел"));
+                arrayLists.add("\n");
+                arrayLists.add("       2-" + executeQuery.getString("Сотрудники"));
+                arrayLists.add("\n");
+                arrayLists.add("               3-" + executeQuery.getString("Должность"));
+                arrayLists.add("\n");
+                arrayLists.add("                     4-" + executeQuery.getString("Проект"));
+                arrayLists.add("\n");
+                arrayLists.add("\n");
             }
             stmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return query;
+        return arrayLists;
     }
 
 }

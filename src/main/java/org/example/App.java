@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class App extends Application {
 
-    static AnchorPane root;
+    public static AnchorPane root;
 
     @Override
     public void start(Stage stage) throws IOException {

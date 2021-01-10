@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import org.example.AlertClass;
 import org.example.ConnectDB;
 import org.example.sql.InsertClass;
+import org.example.sql.UpdateClass;
 
 public class NewProjectController {
 
@@ -55,9 +56,9 @@ public class NewProjectController {
 
 
                     } else {
-
                         InsertClass.addNewProj(ConnectDB.maxProjId, projName.getText(),
                                 Integer.parseInt(excDep.getText()), projFin.getText(), deadline.getText());
+                        UpdateClass.updateDepProj(Integer.parseInt(excDep.getText()), ConnectDB.maxProjId);
                         System.out.println();
                     }
                 } catch (Exception e) {

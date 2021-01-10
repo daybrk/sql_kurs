@@ -65,7 +65,32 @@ public class UpdateClass {
         }
     }
 
-    public static void updateDepProj(int id, String projName, int excDep, String projFin, String deadline) {
+    public static void updateDepProj(int id, int proj) {
+
+        String pro = String.valueOf(proj - 1);
+        try {
+            Statement stmt = connection.createStatement();
+
+            ResultSet executeQuery = stmt.executeQuery("SELECT * FROM Отдел");
+
+            while (executeQuery.next()) {
+                System.out.println(id);
+                if (id == Integer.parseInt(executeQuery.getString("Id_Отдела"))) {
+                    pro = pro + " " + executeQuery.getString("Проекты");
+                }
+            }
+
+            stmt.executeUpdate
+                    ("UPDATE Отдел SET Проекты = " + "'" + pro + "'" + " WHERE Id_Отдела = " + id);
+
+            executeQuery.close();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void updateProj(int id, String projName, int excDep, String projFin, String deadline) {
 
         try {
             Statement stmt = connection.createStatement();
